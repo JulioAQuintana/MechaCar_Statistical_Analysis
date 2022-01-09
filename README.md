@@ -1,7 +1,33 @@
 # MechaCar Statistical Analysis
 
-# Deliverable 1
-## Linear Regression to Predict MPG
+## Overview of Project
+A few weeks after starting his new role, Jeremy is approached by upper management about a special project. AutosRUs’ newest prototype, the MechaCar, is suffering from production troubles that are blocking the manufacturing team’s progress. AutosRUs’ upper management has called on Jeremy and the data analytics team to review the production data for insights that may help the manufacturing team.
+
+In this challenge, you’ll help Jeremy and the data analytics team do the following:
+
+* _Perform multiple linear regression analysis to identify which variables in the dataset predict the mpg of MechaCar prototypes_
+* _Collect summary statistics on the pounds per square inch (PSI) of the suspension coils from the manufacturing lots_
+* _Run t-tests to determine if the manufacturing lots are statistically different from the mean population_
+* _Design a statistical study to compare vehicle performance of the MechaCar vehicles against vehicles from other manufacturers. For each statistical analysis, you’ll write a
+summary interpretation of the findings._
+
+### Deliverables:
+This new assignment consists of three technical analysis deliverables and a proposal for further statistical study. You’ll submit the following:
+
+* _Deliverable 1: Linear Regression to Predict MPG_
+* _Deliverable 2: Summary Statistics on Suspension Coils_
+* _Deliverable 3: T-Test on Suspension Coils_
+* _Deliverable 4: Design a Study Comparing the MechaCar to the Competition_
+
+## Resources
+For following Analysis we require the following resources:
+
+* _Data Source: MechaCar_mpg.csv and Suspension_Coil.csv_
+* _Software: RStudio and R_
+
+## Summary and Results
+### Deliverable 1
+#### Linear Regression to Predict MPG
 
 Deliverable Requirements:
 The MechaCar_mpg.csv dataset contains mpg test results for 50 prototype MechaCars. The MechaCar prototypes were produced using multiple design specifications to identify ideal vehicle performance. Multiple metrics, such as vehicle length, vehicle weight, spoiler angle, drivetrain, and ground clearance, were collected for each vehicle. Using your knowledge of R, you’ll design a linear model that predicts the mpg of MechaCar prototypes using several variables from the MechaCar_mpg.csv file.
@@ -13,12 +39,12 @@ Requirements:
 * _An RScript is written to create the statistical summary of the linear regression model with the intended p-values_
 * _There is a summary that addresses all three questions_
 
-#### Results on Deliverable:
+##### Results on Deliverable:
 ###### Resulting Model:
 
 mpg = (6.267)vehicle_length + (0.0012)vehicle_weight + (0.0688)spoiler_angle + (3.546)ground_clearance + (-3.411)AWD + (-104.0)
  
-#### Written Summary
+##### Written Summary
 _1. We got in vehicle length and vehicle ground are statistically likely to provide non-random amounts of variance to the model. that means that vehicle length and vehicle
 ground clearance have an impact talking about miles per gallon on the MechaCar prototype. in the other hand, vehicle weight, spoiler angle, and AWD have p-values that indicate
 random amount of variance in the dataset._
@@ -29,11 +55,14 @@ reject our null hypothesis._
 _3. For this linear model has an r-squared: 0.7149, that means approximately 71% of all mpg predictions that will be determined by this model. in this way, his multiple
 regression model predict mpg of MechaCar prototypes in god way and effectively._
 
-   ####  Model Image Results
-   ![](https://github.com/JulioAQuintana/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
+   #####  Model Image Results
+   ![](https://github.com/JulioAQuintana/MechaCar_Statistical_Analysis/blob/main/Resources/Images/LinearRegresion_lm.png)
+   
+   #####  Summary
+   ![](https://github.com/JulioAQuintana/MechaCar_Statistical_Analysis/blob/main/Resources/Images/Summary_P-value_R-squared.png)
   
-  # Deliverable 2
-  ## Summary Statistics on Suspension Coils
+  ### Deliverable 2
+  #### Summary Statistics on Suspension Coils
 The MechaCar Suspension_Coil.csv dataset contains the results from multiple production lots. In this dataset, the weight capacities of multiple suspension coils were tested to
 determine if the manufacturing process is consistent across production lots. Using your knowledge of R, you’ll create a summary statistics table to show:
 
@@ -50,11 +79,11 @@ Requirements:
 Suspension Coil dataset provided for the MechaCar contains the results of testing the weight capacities of multiple suspension coils and from multiple production lots to
 determine consistency.
 
-  ### Fist calculation of Manufacturing lot:
-   ![](https://github.com/JulioAQuintana/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
+  #### Fist calculation of Manufacturing lot:
+   ![](https://github.com/JulioAQuintana/MechaCar_Statistical_Analysis/blob/main/Resources/Images/totalSummary_table.png)
 
-  ### and then analysis by each one of 3 manufacturing lots:
-   ![](https://github.com/JulioAQuintana/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
+  #### and then analysis by each one of 3 manufacturing lots:
+   ![](https://github.com/JulioAQuintana/MechaCar_Statistical_Analysis/blob/main/Resources/Images/lotSummary.png)
 
 * _The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current_
 * _manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?_
@@ -63,8 +92,8 @@ during the analysis of entire population of the production lot, we got variance 
 consistent trend, Lot 1 and Lot 2 are in good way within the 100 PSI variance requirement, with variances of 0.98 and 7.47 respectively, the Lot 3 that showa larger variance in
 performance and consistency, with a variance of 170.29, It is Lot 3 that is disproportionately causing variance in the complete lot level.
 
-  # Deliverable 3
-  ## T-Tests on Suspension Coils
+  ### Deliverable 3
+  #### T-Tests on Suspension Coils
 Using your knowledge of R, perform t-tests to determine if all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds
 per square inch.
 
@@ -79,7 +108,7 @@ hypothesized, potential population dataset. Using the presumed population mean o
 
 There is a summary of the t-test results across all manufacturing lots:
 
-   ![](https://github.com/JulioAQuintana/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
+   ![](https://github.com/JulioAQuintana/MechaCar_Statistical_Analysis/blob/main/Resources/Images/t-test1.png)
    
 based on the information we got we can see the true mean of the sample is 1498.78. With a p-value of 0.06 that is higher than the common
 significance level of 0.05, we assume that is not enough evidence to support rejecting the null hypothesis, also we can see in the analysis that the mean of all three of these
@@ -94,12 +123,12 @@ of 1500 are statistically similar. implícitaimp
 _3. Lot 3 has a different result scenario, here the sample mean is 1496.14 and the p-Value is 0.04 lower than the common significance level of 0.05. All
 indicating to reject the null hypothesis that this sample mean and the presumed population mean are not statistically different.
 
-  ![](https://github.com/JulioAQuintana/PyBer_Analysis/blob/main/analysis/PyBer_fare_summary.png)
+  ![](https://github.com/JulioAQuintana/MechaCar_Statistical_Analysis/blob/main/Resources/Images/3T-test.png)
   
 After this analysis, the recomendation is to perform a revision of lot 3 due that we probably have some fails in the production system.
 
-  # Deliverable 4
-  ## Study Design: MechaCar vs Competition
+  ### Deliverable 4
+  #### Study Design: MechaCar vs Competition
 Using your knowledge of R, design a statistical study to compare performance of the MechaCar vehicles against performance of vehicles from other manufacturers.
 
 Requirements:
